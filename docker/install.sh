@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -Eeu
 
-apk add --no-cache autoconf automake git libtool
+apt-get install --yes autoconf automake git libtool
 
 git clone https://github.com/cpputest/cpputest.git
 cd cpputest
@@ -9,5 +9,3 @@ cd cpputest
 autoreconf . -i
 ./configure
 make tdd
-
-apk del git
